@@ -3,6 +3,10 @@
   "version": 2,
   "projects": {
     "app": "apps/app",
-    "app-e2e": "apps/app-e2e"
+    "app-e2e": "apps/app-e2e",
+    "lib-components": "libs/lib-components",
+    "lib-core": "libs/lib-core",
+    "lib-feature1": "libs/lib-feature1",
+    "lib-feature2": "libs/lib-feature2"
   }
 }

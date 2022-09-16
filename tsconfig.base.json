@@ -14,7 +14,12 @@
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@nx-references/lib-components": ["libs/lib-components/src/index.ts"],
+      "@nx-references/lib-core": ["libs/lib-core/src/index.ts"],
+      "@nx-references/lib-feature1": ["libs/lib-feature1/src/index.ts"],
+      "@nx-references/lib-feature2": ["libs/lib-feature2/src/index.ts"]
+    }
   },
   "exclude": ["node_modules", "tmp"]
 }
