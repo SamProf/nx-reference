@@ -1,3 +1,25 @@
+# Import Issue
+
+The problem is that I have configured in eslint that in the simplest case only the following dependencies are available:
+app -> feature -> core
+
+Next, the developer created the file in lib/lib-feature1.
+libs/lib-feature1/src/lib/feature1-main/sex-enum.ts
+
+
+Imagine he forgot to re-export it via libs/lib-feature1/src/index.ts
+
+And just in WebStorm starts using this Enum in libs/lib-core/src/lib/main-service.ts
+
+WebStorm immediately finds the direct path to this file and automatically corrupts this Enum by the relative path
+'import {SexEnum} from "../../../lib-feature1/src/lib/feature1-main/sex-enum";'
+
+And there are a few problems
+- The programmer did not re-export the required enum into the index.ts library
+- The path is not created on the result of a buildable library, but is probably compiled into this library directly.
+- Linter does not see this as a problem, although it is forbidden to link to the feature library from the core library.
+
+
 
 
 # NxReferences
